@@ -48,7 +48,7 @@ function App() {
           <UserForm
           //En passant les fonctions en props, on peut les utiliser dans UserForm.jsx et UserTable.jsx
             onUserAdd={handleAddUser}
-            onUserEdit={handleEditUser}
+            onUserEdit={editingUser}
             onUserUpdate={handleUpdateUser}
           />
         </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function UserForm({ onUserAdd, onUserEdit, onUserUpdate }) {
+export default function UserForm({ onUserAdd, onUserEdit, onUserUpdate, idCounter }) {
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
 
@@ -15,7 +15,7 @@ export default function UserForm({ onUserAdd, onUserEdit, onUserUpdate }) {
     e.preventDefault();
 
     const newUser = {
-      id: onUserEdit ? onUserEdit.id : Date.now(),
+      id: onUserEdit ? onUserEdit.id : idCounter,
       name,
       username,
     };
